@@ -1,0 +1,133 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#notfound {
+    
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(#ffc7c7,rgb(253, 236, 236));
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.notfound {
+    max-width: 560px;
+    width: 100%;
+    padding-left: 160px;
+    line-height: 1.1;
+}
+
+.notfound .notfound-404 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/emoji.png");
+    background-size: cover;
+}
+
+.notfound .notfound-404:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(2.4);
+    -ms-transform: scale(2.4);
+    transform: scale(2.4);
+    border-radius: 50%;
+    background-color: #f2f5f8;
+    z-index: -1;
+}
+
+.notfound h1 {
+    font-family: "Nunito", sans-serif;
+    font-size: 125px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 65px;
+    color: #151723;
+    text-transform: uppercase;
+    -webkit-box-reflect: below -40px linear-gradient(transparent,#0004);
+}
+.notfound h1 span{
+    animation: animate 5s linear infinite;
+}
+
+.notfound h1 span:nth-child(even){
+    animation-delay:0.4s ;
+}
+.notfound h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    margin: 0;
+    margin-left: 65px;
+    text-transform: uppercase;
+    color: #151723;
+}
+
+.notfound p {
+    font-family: "Nunito", sans-serif;
+    color: #999fa5;
+    font-weight: 400;
+    margin-left: 65px;
+}
+
+.notfound a {
+    text-align: center;    
+    font-family: "Nunito", sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 40px;
+    text-decoration: none;
+    color: black;
+    height: 40px;
+    width: 200px;
+    background: linear-gradient(120deg,  #9b408f,#3ca7ee);
+    margin-top: 10px;
+    margin-left: 65px;
+    padding: 10px 0; 
+}
+.notfound a:hover{
+    font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .notfound .notfound-404 {
+    width: 110px;
+    height: 110px;
+    }
+    .notfound {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 110px;
+    }
+}
+
+@keyframes animate{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%,100%{
+        color: #151723;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65.1%,80.1%,90%,92.1%,100%{
+        color: #3ca7ee;
+        text-shadow: 0 0 10px #03bcf4;
+
+    }
+}
